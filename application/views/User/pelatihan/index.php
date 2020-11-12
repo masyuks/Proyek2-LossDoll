@@ -15,11 +15,11 @@
 </head>   
 <body>
         <?php $this->load->view('User/Template/navbar')?>
- <!-- ##### Breadcrumb Area Start ##### -->
- <div class="breadcrumb-area">
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <div class="breadcrumb-area">
         <!-- Top Breadcrumb Area -->
         <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(<?php echo base_url().'assets/User/img/bg-img/24.jpg';?>);">
-            <h2>Daur Ulang</h2>
+            <h2>Pelatihan</h2>
         </div>
 
         <div class="container">
@@ -29,7 +29,7 @@
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="<?php echo base_url().'User/dashboard';?>"><i class="fa fa-home"></i> Home</a></li>
                             <li class="breadcrumb-item"><a href="<?php echo base_url().'User/program';?>">Program</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Daur Ulang</li>
+                            <li class="breadcrumb-item active" aria-current="page">Pelatihan</li>
                         </ol>
                     </nav>
                 </div>
@@ -48,20 +48,12 @@
                         <!-- Post Details Area -->
                         <div class="single-post-details-area">
                             <div class="post-content">
-                                <h4 class="post-title">Daur Ulang</h4>
-                                <p>BSM menganut falsafah 3R (Reduce, Reuse, Recycle), salah satu penerapan sistem recycle (daur ulang) di bank sampah malang adalah dengan membuat beraneka ragam produk daur ulang yang berbahan dasar menggunakan sampah anorganik.</p>                      
+                                <h4 class="post-title">Pelatihan</h4>
+                                <p>Kegiatan pelatihan di Bank Sampah Malang meliputi kegiatan pemilahan sampah dan kegiatan pelatihan kerajinan daur ulang sampah. </p>                      
                                 <div class="post-thumbnail mb-30">
-                                    <img src="<?php echo base_url().'assets/User/img/bg-img/daurulang_b1.png';?>" alt="">
+                                    <img src="<?php echo base_url().'assets/User/img/bg-img/pelatihan_b1.png';?>" alt="">
                                 </div>
-                                <p>Bank Sampah Malang menganut falsafah 3R (Reduce, Reuse, Recycle), salah satu penerapan sistem recycle (daur ulang) di bank sampah malang adalah dengan membuat beraneka ragam produk-produk kerajinan daur ulang yang berbahan dasar menggunakan sampah anorganik seperti plastik hasil sampah metalising dari bungkus kopi ataupun snack, sampah gelas plastik, dan juga sampah kertas.</p>
-                                <div class="post-thumbnail mb-30">
-                                    <img src="<?php echo base_url().'assets/User/img/bg-img/daurulang_b2.png';?>" alt="">
-                                </div>
-                                <p>Hasil kerajinan daur ulang dari sampah tersebut selanjutnya dibuat menjadi bentuk-bentuk baru seperti tas, dompet, tempat tisu, tempat alat tulis, guci, dan berbagai jenis kerajinan lainnya.</p>
-                                <div class="post-thumbnail mb-30">
-                                    <img src="<?php echo base_url().'assets/User/img/bg-img/daurulang_b3.png';?>" alt="">
-                                </div>
-                                <p>Beragam hasil kerajinan daur ulang tersebut merupakan hasil kolaborasi antara Bank Sampah Malang dengan para nasabahnya, hasil-hasil kerajinan terbaik dapat dipasarkan langsung melalui Bank Sampah Malang.</p>
+                                <p>Melalui pelatihan pemilahan sampah masyarakat dapat mengetahui bahwa sampah memiliki nilai ekonomi dan secara nyata dapat menciptakan lingkungan yang lebih asri dan sehat.  Sedangkan kegiatan pelatihan daur ulang sampah bertujuan untuk memanfaatkan kembali sampah yang masih memiliki nilai dan fungsi, serta menjadikan sampah sebagai barang yang bermanfaat.  </p>
                         <!-- Post Tags & Share -->
                         <div class="post-tags-share d-flex justify-content-between align-items-center">
                             <!-- Tags -->
@@ -70,7 +62,7 @@
                                 <li><a href="<?php echo base_url().'User/pendampingan';?>">Pendampingan</a></li>
                                 <li><a href="<?php echo base_url().'User/studi';?>">Studi Banding</a></li>
                                 <li><a href="<?php echo base_url().'User/workshop';?>">Workshop</a></li>
-                                <li><a href="<?php echo base_url().'User/pelatihan';?>">Pelatihan</a></li>
+                                <li><a href="<?php echo base_url().'User/daur_ulang';?>">Daur Ulang</a></li>
                             </ol>
                         </div>
                         

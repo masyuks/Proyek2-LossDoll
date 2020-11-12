@@ -94,28 +94,32 @@
                 </tr>
                 </thead>
                 <tbody>
+                    <?php $no=1; foreach ($user as $pmj): ?>
                     <tr>
-                        <td>1</td>
-                        <td>Nama</td>
-                        <td>Alamat</td>
-                        <td>L</td>
-                        <td>000</td>
-                        <td>user</td>
-                        <td>111</td>
-                        <td>dewa</td>
-                        <td>Jomblo</td>
+                        <td><?= $no++ ?></td>
+                        <td><?= $pmj->nama ?></td>
+                        <td><?= $pmj->alamat ?></td>
+                        <td><?= $pmj->jenis_kelamin ?></td>
+                        <td><?= $pmj->no_hp ?></td>
+                        <td><?= $pmj->username ?></td>
+                        <td><?= $pmj->password ?></td>
+                        <td><?= $pmj->level ?></td>
+                        <td><?= $pmj->status ?></td>
                         <td>
-                            <a class='btn btn-danger' onclick="return confirm('Apakah Anda Yakin ingin menghapus data ini?')" href="#">
+                            <a class='btn btn-danger' onclick="return confirm('Apakah Anda Yakin ingin menghapus data ini?')" href="<?= base_url().'Admin/user/hapus/'.$pmj->id_user ?>">
                                 <i class="fa fa-trash" aria-hidden="true"></i>
                             </a>
-                            <a class='btn btn-warning' href="#">
+                            <a class='btn btn-warning' href="<?= base_url().'Admin/user/edit/'.$pmj->id_user ?>">
                                 <i class="fas fa-edit" aria-hidden="true"></i>
                             </a>
-                            <a class='btn btn-info' href ='#' class='btn btn-biru'>
+                            <a class='btn btn-info' href ='<?= base_url().'admin/user/detail/'.$pmj->id_user?>' class='btn btn-biru'>
                                  <i class="fas fa-eye" aria-hidden="true"></i>
                             </a>
+
+
                         </td>
                     </tr>
+                    <?php endforeach ?>
                 </tbody>
               </table>             
             <!-- /.card-body -->

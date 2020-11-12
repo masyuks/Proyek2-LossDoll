@@ -89,22 +89,24 @@
                 </tr>
                 </thead>
                 <tbody>
+                    <?php $no=1; foreach ($poin as $pmj): ?>
                     <tr>
-                        <td>1</td>
-                        <td>Nama</td>
-                        <td>10</td>
+                        <td><?= $no++ ?></td>
+                        <td><?= $pmj->nama ?></td>
+                        <td><?= $pmj->total_poin ?></td>
                         <td>
-                            <a class='btn btn-danger' onclick="return confirm('Apakah Anda Yakin ingin menghapus data ini?')" href="#">
+                            <a class='btn btn-danger' onclick="return confirm('Apakah Anda Yakin ingin menghapus data ini?')" href="<?= base_url().'Admin/poin/hapus/'.$pmj->id_poin ?>">
                                 <i class="fa fa-trash" aria-hidden="true"></i>
                             </a>
-                            <a class='btn btn-warning' href="#">
+                            <a class='btn btn-warning' href="<?= base_url().'Admin/poin/edit/'.$pmj->id_poin ?>">
                                 <i class="fas fa-edit" aria-hidden="true"></i>
                             </a>
-                            <a class='btn btn-info' href='#' class='btn btn-biru'>
+                            <a class='btn btn-info' href='<?= base_url().'Admin/poin/detail/'.$pmj->id_poin?>' class='btn btn-biru'>
                                  <i class="fas fa-eye" aria-hidden="true"></i>
                             </a>
                         </td>
                     </tr>
+                    <?php endforeach ?>
                 </tbody>
               </table>
              

@@ -92,26 +92,30 @@
                 </tr>
                 </thead>
                 <tbody>
+                    <?php $no=1; foreach ($donasi as $pmj): ?>
                     <tr>
-                        <td>1</td>
-                        <td>Contoh Nama</td>
-                        <td>Contoh Pegawai</td>
-                        <td>01-02-03</td>                    
-                        <td>01-02-03</td>
-                        <td>Jomblo</td>
+                        <td><?= $no++ ?></td>
+                        <td><?= $pmj->nama ?></td>
+                        <td><?= $pmj->tgl_pengambilan == '0000-00-00' ? 'belum ada': $pmj->nama_pegawai ?></td>
+                        
+                        <td><?= date('d F Y', strtotime($pmj->tgl_donasi)); ?></td>
+                      
+                        <td><?= $pmj->tgl_pengambilan == '0000-00-00' ? 'belum di ambil': date('d F Y', strtotime($pmj->tgl_pengambilan)) ?></td>
+                        <td><?= $pmj->status == 'BELUM' ? 'BELUM TERAMBIL' : $pmj->status ?></td>
                         <td>
-                            <a class='btn btn-danger' onclick="return confirm('Apakah Anda Yakin ingin menghapus data ini?')" href="#">
+                            <a class='btn btn-danger' onclick="return confirm('Apakah Anda Yakin ingin menghapus data ini?')" href="<?= base_url().'Admin/donasi/hapus/'.$pmj->id_donasi ?>">
                                 <i class="fa fa-trash" aria-hidden="true"></i>
                             </a>
-                            <a class='btn btn-warning' href="#">
+                            <a class='btn btn-warning' href="<?= base_url().'Admin/donasi/edit/'.$pmj->id_donasi ?>">
                                 <i class="fas fa-edit" aria-hidden="true"></i>
                             </a>
-                            <a class='btn btn-info' href ='#' class='btn btn-biru'>
+                            <a class='btn btn-info' href ='<?= base_url().'Admin/donasi/detail/'.$pmj->id_donasi?>' class='btn btn-biru'>
                                  <i class="fas fa-eye" aria-hidden="true"></i>
                             </a>
                             
                         </td>
                     </tr>
+                    <?php endforeach ?>
                 </tbody>
               </table>
 

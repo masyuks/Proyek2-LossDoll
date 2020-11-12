@@ -7,7 +7,5 @@ class dashboard extends CI_Controller {
     {
         $this->load->view('User/dashboard/index');
     }
-
 }
-
-/* End of file Controllername.php */
+?>

@@ -15,7 +15,7 @@
     <div class="small-box bg-green">
       <div class="inner">
       <h3>
-          0
+          <?php echo $this->db->get('Donasi')->num_rows() ?>
         </h3>
         <p>Pengambilan Donasi</p>
       </div>
@@ -32,7 +32,7 @@
   <div class="small-box bg-green">
     <div class="inner">
     <h3>
-        0
+        <?php echo $this->db->get('galeri')->num_rows() ?>
       </h3>
       <p>Galeri</p>
     </div>
@@ -50,7 +50,7 @@
   <div class="small-box bg-green">
     <div class="inner">
     <h3>
-    0
+    <?php echo $this->db->get('detail_donasi')->num_rows() ?>
     <h3>
       <p>Transaksi Donasi</p>
     </div>
@@ -67,7 +67,7 @@
   <div class="small-box bg-green">
     <div class="inner">
     <h3>
-    0
+    <?php echo $this->db->get('poin')->num_rows() ?>
     <h3>
       <p>Poin</p>
     </div>
@@ -84,7 +84,7 @@
   <div class="small-box bg-green">
     <div class="inner">
     <h3>
-    0
+    <?php echo $this->db->get('pegawai')->num_rows() ?>
     <h3>
       <p>Pegawai</p>
     </div>
@@ -100,7 +100,7 @@
   <div class="small-box bg-green">
     <div class="inner">
     <h3>
-    0
+    <?php echo $this->db->get('user')->num_rows() ?>
     <h3>
       <p>User</p>
     </div>
@@ -116,7 +116,7 @@
   <div class="small-box bg-green">
     <div class="inner">
     <h3>
-    0
+    <?php echo $this->db->get('berita')->num_rows() ?>
     <h3>
       <p>Berita</p>
     </div>
@@ -131,7 +131,7 @@
   <div class="small-box bg-green">
     <div class="inner">
     <h3>
-    0
+    <?php echo $this->db->get('produk')->num_rows() ?>
     <h3>
       <p>Produk</p>
     </div>

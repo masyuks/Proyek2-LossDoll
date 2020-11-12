@@ -93,27 +93,29 @@
                 </tr>
                 </thead>
                 <tbody>
+                    <?php $no=1; foreach ($detail_donasi as $pmj): ?>
                     <tr>
-                        <td>1</td>
-                        <td>Contoh Nama</td>
-                        <td>Contoh Jenis</td>
-                        <td>0 kg </td>
-                        <td>Simalakama</td>
-                        <td>000</td>
-                        <td>#</td>
+                        <td><?= $no++ ?></td>
+                        <td><?= $pmj->nama ?></td>
+                        <td><?= $pmj->jenis_donasi ?></td>
+                        <td><?= $pmj->berat ?> kg </td>
+                        <td><?= $pmj->alamat ?></td>
+                        <td><?= $pmj->no_hp ?></td>
+                        <td><img src="<?= base_url('assets/Upload/donasi_image/') . $pmj->foto ?>" style= "width:50px; height:50px;" ></td>
                       
                         <td>
-                            <a class='btn btn-danger' onclick="return confirm('Apakah Anda Yakin ingin menghapus data ini?')" href="#">
+                            <a class='btn btn-danger' onclick="return confirm('Apakah Anda Yakin ingin menghapus data ini?')" href="<?= base_url().'Admin/detail_donasi/hapus/'.$pmj->id_detail_donasi ?>">
                                 <i class="fa fa-trash" aria-hidden="true"></i>
                             </a>
-                            <a class='btn btn-warning' href="#">
+                            <a class='btn btn-warning' href="<?= base_url().'Admin/detail_donasi/edit/'.$pmj->id_detail_donasi ?>">
                                 <i class="fas fa-edit" aria-hidden="true"></i>
                             </a>
-                            <a class='btn btn-info' href='#' class='btn btn-biru'>
+                            <a class='btn btn-info' href='<?= base_url().'Admin/detail_donasi/detail/'.$pmj->id_detail_donasi?>' class='btn btn-biru'>
                                  <i class="fas fa-eye" aria-hidden="true"></i>
                             </a>
                         </td>
                     </tr>
+                    <?php endforeach ?>
                 </tbody>
               </table>
 

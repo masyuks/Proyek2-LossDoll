@@ -92,25 +92,27 @@
                 </tr>
                 </thead>
                 <tbody>
+                    <?php $no=1; foreach ($pegawai as $pmj): ?>
                     <tr>
-                        <td>1</td>
-                        <td>Nama</td>
-                        <td>01-02-03</td>
-                        <td>L</td>
-                        <td>Sidoarjo</td>
-                        <td>000</td>
+                        <td><?= $no++ ?></td>
+                        <td><?= $pmj->nama_pegawai ?></td>
+                        <td><?= date('d F Y', strtotime($pmj->ttl)); ?></td>
+                        <td><?= $pmj->jenis_kelamin ?></td>
+                        <td><?= $pmj->alamat ?></td>
+                        <td><?= $pmj->no_hp ?></td>
                         <td>
-                            <a class='btn btn-danger' onclick="return confirm('Apakah Anda Yakin ingin menghapus data ini?')" href="#">
+                            <a class='btn btn-danger' onclick="return confirm('Apakah Anda Yakin ingin menghapus data ini?')" href="<?= base_url().'Admin/pegawai/hapus/'.$pmj->id_pegawai ?>">
                                 <i class="fa fa-trash" aria-hidden="true"></i>
                             </a>
-                            <a class='btn btn-warning' href="#">
+                            <a class='btn btn-warning' href="<?= base_url().'Admin/pegawai/edit/'.$pmj->id_pegawai ?>">
                                 <i class="fas fa-edit" aria-hidden="true"></i>
                             </a>
-                            <a class='btn btn-info' href='#' class='btn btn-biru'>
+                            <a class='btn btn-info' href='<?= base_url().'Admin/pegawai/detail/'.$pmj->id_pegawai?>' class='btn btn-biru'>
                                  <i class="fas fa-eye" aria-hidden="true"></i>
                             </a>
                         </td>
                     </tr>
+                    <?php endforeach ?>
                 </tbody>
               </table>
             <!-- /.card-body -->

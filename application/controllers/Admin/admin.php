@@ -9,6 +9,9 @@
         {
             parent::__construct();
             $this->load->helper('url');
+            if ($this->session->userdata('level')!= "admin") {
+                redirect('Admin/login', 'refresh');
+            }  
         }
         
         public function index()
@@ -19,6 +22,10 @@
            $this->load->view('template/sidebar_admin');
            $this->load->view('admin/home/index', $data);
            $this->load->view('template/footer_admin');  
+        }
+        public function logout(){
+            $this->session->sess_destroy();
+            redirect('Admin/login', 'refresh');
         }
     }
         /* End of fils admin.php */

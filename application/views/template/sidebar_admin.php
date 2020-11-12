@@ -115,23 +115,23 @@ to get the desired effect
             </a>
           </li>
 
-<!--           <li class="nav-item">
+          <li class="nav-item">
            <a href="<?php echo base_url().'Admin/galeri' ?>" class="nav-link" id="navHome">
               <i class="nav-icon fas fa-camera"></i>
               <p>
                 Galeri
               </p>
             </a>
-          </li> -->
+          </li>
 
-<!--           <li class="nav-item">
+          <li class="nav-item">
            <a href="<?php echo base_url().'Admin/berita' ?>" class="nav-link" id="navHome">
               <i class="nav-icon fas fa-newspaper"></i>
               <p>
                 Berita
               </p>
             </a>
-          </li> -->
+          </li>
 
           <li class="nav-item">
            <a href="<?php echo base_url().'Admin/produk' ?>" class="nav-link" id="navHome">
@@ -143,26 +143,25 @@ to get the desired effect
           </li>
 
           
-<!--           <li class="nav-item">
+          <li class="nav-item">
            <a href="<?php echo base_url().'Admin/komentar' ?>" class="nav-link" id="navHome">
            <i class="nav-icon fas fa-envelope"></i>
               <p>
                 Komentar
               </p>
             </a>
-          </li> -->
-<!--           <li class="nav-item">
+          </li>
+          <li class="nav-item">
            <a href="<?php echo base_url().'Admin/database_backup/cetak' ?>" class="nav-link" id="navHome">
            <i class="nav-icon fas fa-database"></i>
               <p>
                 Backup Database
               </p>
             </a>
-          </li> -->
+          </li>
           
           <li class="nav-item">
-           <!-- <a href="<?php echo base_url().'Admin/login/logout';?>" class="nav-link" id="navHome"> -->
-           <a href="#" class="nav-link" id="navHome">
+           <a href="<?php echo base_url().'Admin/login/logout';?>" class="nav-link" id="navHome">
               <i class="nav-icon fas fa-sign-out-alt"></i>
               <p>
                 Logout

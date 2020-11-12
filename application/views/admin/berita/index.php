@@ -93,24 +93,26 @@
                 </tr>
                 </thead>
                 <tbody>
+                    <?php $no=1; foreach ($berita as $pmj): ?>
                     <tr>
-                        <td>1</td>
-                        <td style="width:200px">Judul</td>
-                        <td style="width:200px">01-02-03</td>
-                        <td style="width:500px">Contoh Deskirpsi</td>
-                        <td style="width:200px"></td>
+                        <td><?= $no++ ?></td>
+                        <td style="width:200px"><?= $pmj->judul ?></td>
+                        <td style="width:200px"><?= date('d F Y', strtotime($pmj->tgl_kegiatan)); ?></td>
+                        <td style="width:500px"><?= $pmj->deskripsi ?></td>
+                        <td style="width:200px"><img src="<?= base_url('assets/Upload/berita_image/') . $pmj->foto ?>" style= "width:100px; height:100px;" ></td>
                         <td style="width:180px">
-                            <a class='btn btn-danger' onclick="return confirm('Apakah Anda Yakin ingin menghapus data ini?')" href="#">
+                            <a class='btn btn-danger' onclick="return confirm('Apakah Anda Yakin ingin menghapus data ini?')" href="<?= base_url().'Admin/berita/hapus/'.$pmj->id_berita ?>">
                                 <i class="fa fa-trash" aria-hidden="true"></i>
                             </a>
-                            <a class='btn btn-warning' href="#">
+                            <a class='btn btn-warning' href="<?= base_url().'Admin/berita/edit/'.$pmj->id_berita ?>">
                                 <i class="fas fa-edit" aria-hidden="true"></i>
                             </a>
-                            <a class='btn btn-info' href='#' class='btn btn-biru'>
+                            <a class='btn btn-info' href='<?= base_url().'Admin/berita/detail/'.$pmj->id_berita?>' class='btn btn-biru'>
                                  <i class="fas fa-eye" aria-hidden="true"></i>
                             </a>
                         </td>
                     </tr>
+                    <?php endforeach ?>
                 </tbody>
               </table>
             <!-- /.card-body -->
